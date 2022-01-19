@@ -15,7 +15,7 @@ export class TodosService {
   }
 
   async findAll(): Promise<Todo[]> {
-    return this.todoModel.find().exec().toJSON();
+    return this.todoModel.find().exec();
   }
 
   async findOne(todoId: string): Promise<Todo> {
