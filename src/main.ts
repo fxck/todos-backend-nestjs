@@ -7,7 +7,7 @@ async function bootstrap() {
     origin: `${
       process.env.APP_ENV === 'production'
         ? process.env.FE_URL
-        : 'http://localhost:3000'
+        : process.env.DEV_FE_URL || 'http://localhost:3000'
     }`,
   });
 
