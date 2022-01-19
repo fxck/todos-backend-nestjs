@@ -5,3 +5,5 @@ export const TodoSchema = new mongoose.Schema({
   index: Number,
   completed: Boolean,
 });
+
+TodoSchema.virtual('id').get(() => this._id.toHexString());
