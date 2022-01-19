@@ -19,7 +19,7 @@ export class TodosService {
   }
 
   async findOne(todoId: string): Promise<Todo> {
-    const task = await this.todoModel.findById(todoId).exec().toJSON();
+    const task = await this.todoModel.findById(todoId).exec();
     if (!task) {
       throw new NotFoundException('todo not found');
     }
