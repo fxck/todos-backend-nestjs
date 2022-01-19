@@ -1,8 +1,10 @@
 api:
   build:
     base: [ nodejs@14 ]
+    prepare:
+      - npm install -g @nestjs/cli
     build:
-      - npm i  --loglevel=error
+      - npm i --loglevel=error
       - npm run build --prod --loglevel=error
     deploy: [ './dist', 'node_modules', 'package.json' ]
   run:
