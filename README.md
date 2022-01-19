@@ -1,4 +1,4 @@
-# TODOS backend
+# TODOS backend.
 Todo app based on [Nest](https://github.com/nestjs/nest) with Mongo DB.
 
 ## Description
