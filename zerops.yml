@@ -4,7 +4,7 @@ api:
     prepare:
       - npm install -g @nestjs/cli
     build:
-      - npm i --loglevel=error
+      - npm i --loglevel=error --production=false
       - npm run build --prod --loglevel=error
     deploy: [ './dist', 'node_modules', 'package.json' ]
   run:
